@@ -15,7 +15,7 @@ head.shape("square")
 head.color("#ffffff")
 head.penup()
 head.goto(0,0)
-head.direction = "left"
+head.direction = "right"
 
 def move():
     if head.direction == "up":
@@ -29,6 +29,10 @@ def move():
     if head.direction == "left":
         x = head.xcor()
         head.setx(x-20)
+        
+    if head.direction == "right":
+        x = head.xcor()
+        head.setx(x+20)
     
 
 while True:
