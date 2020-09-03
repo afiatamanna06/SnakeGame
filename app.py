@@ -15,12 +15,16 @@ head.shape("square")
 head.color("#ffffff")
 head.penup()
 head.goto(0,0)
-head.direction = "up"
+head.direction = "down"
 
 def move():
     if head.direction == "up":
         y = head.ycor()
         head.sety(y+20)
+        
+    if head.direction == "down":
+        y = head.ycor()
+        head.sety(y-20)
     
 
 while True:
