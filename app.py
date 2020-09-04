@@ -15,7 +15,19 @@ head.shape("square")
 head.color("#ffffff")
 head.penup()
 head.goto(0,0)
-head.direction = "right"
+head.direction = "stop"
+
+def go_up():
+    head.direction = "up"
+    
+def go_down():
+    head.direction = "down"
+    
+def go_left():
+    head.direction = "left"
+    
+def go_right():
+    head.direction = "right"
 
 def move():
     if head.direction == "up":
@@ -33,7 +45,13 @@ def move():
     if head.direction == "right":
         x = head.xcor()
         head.setx(x+20)
-    
+ 
+wn.listen() 
+wn.onkeypress(go_up, "w")
+wn.onkeypress(go_down, "s")
+wn.onkeypress(go_left, "a")
+wn.onkeypress(go_right, "d")
+  
 
 while True:
     wn.update()
