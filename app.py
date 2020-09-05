@@ -83,6 +83,11 @@ while True:
         y = segments[index-1].ycor()
         segments[index].goto(x, y)
     
+    if len(segments) > 0:
+        x = head.xcor()
+        y = head.ycor()
+        segments[0].goto(x, y)
+    
     move()
     
     time.sleep(delay)
