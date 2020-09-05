@@ -78,6 +78,11 @@ while True:
         new_segment.penup()
         segments.append(new_segment)
     
+    for index in range(len(segments)-1,0,-1):
+        x = segments[index-1].xcor()
+        y = segments[index-1].ycor()
+        segments[index].goto(x, y)
+    
     move()
     
     time.sleep(delay)
