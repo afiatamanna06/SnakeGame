@@ -25,6 +25,8 @@ food.color("red")
 food.penup()
 food.goto(0,100)
 
+segments = []
+
 def go_up():
     head.direction = "up"
     
@@ -68,6 +70,13 @@ while True:
         x = random.randint(-290,290)
         y = random.randint(-290,290)
         food.goto(x, y)
+        
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("grey")
+        new_segment.penup()
+        segments.append(new_segment)
     
     move()
     
