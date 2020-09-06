@@ -66,6 +66,11 @@ wn.onkeypress(go_right, "d")
 while True:
     wn.update()
     
+    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+    
     if head.distance(food) < 20:
         x = random.randint(-290,290)
         y = random.randint(-290,290)
