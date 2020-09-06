@@ -70,7 +70,13 @@ while True:
         time.sleep(1)
         head.goto(0,0)
         head.direction = "stop"
-    
+        
+        for segment in segments:
+            segment.goto(1000,1000)
+            
+        segments.clear()
+            
+        
     if head.distance(food) < 20:
         x = random.randint(-290,290)
         y = random.randint(-290,290)
