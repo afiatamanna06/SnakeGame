@@ -101,6 +101,17 @@ while True:
     
     move()
     
+    for segment in segments:
+        if segment.distance(head) < 20:
+            time.sleep(1)
+            head.goto(0,0)
+            head.direction = "stop"
+            
+            for segment in segments:
+                segment.goto(1000,1000)
+            
+            segments.clear()
+    
     time.sleep(delay)
 
 
