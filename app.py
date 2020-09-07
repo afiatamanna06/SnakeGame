@@ -2,7 +2,7 @@ import turtle
 import time
 import random
 
-delay = 0.1
+delay = 0.2
 
 wn = turtle.Screen()
 wn.title("Snake Game")
@@ -28,16 +28,20 @@ food.goto(0,100)
 segments = []
 
 def go_up():
-    head.direction = "up"
+    if head.direction != "down":
+        head.direction = "up"
     
 def go_down():
-    head.direction = "down"
+    if head.direction != "up":
+        head.direction = "down"
     
 def go_left():
-    head.direction = "left"
+    if head.direction != "right":
+        head.direction = "left"
     
 def go_right():
-    head.direction = "right"
+    if head.direction != "left":
+        head.direction = "right"
 
 def move():
     if head.direction == "up":
