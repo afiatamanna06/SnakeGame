@@ -4,6 +4,9 @@ import random
 
 delay = 0.2
 
+score = 0
+high_score = 0
+
 wn = turtle.Screen()
 wn.title("Snake Game")
 wn.bgcolor("#000033")
@@ -101,6 +104,14 @@ while True:
         new_segment.color("grey")
         new_segment.penup()
         segments.append(new_segment)
+        
+        score += 10
+        
+        if score > high_score:
+            high_score = score
+            
+        pen.clear()
+        pen.write("Score: {} High Score: {}".format(score,high_score),align="center",font=("Courier", 24, "normal"))
     
     for index in range(len(segments)-1,0,-1):
         x = segments[index-1].xcor()
