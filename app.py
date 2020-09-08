@@ -94,6 +94,8 @@ while True:
         
         score = 0
         
+        delay = 0.2
+        
         pen.clear()
         pen.write("Score: {} High Score: {}".format(score,high_score),align="center",font=("Courier", 24, "normal"))
             
@@ -109,6 +111,8 @@ while True:
         new_segment.color("grey")
         new_segment.penup()
         segments.append(new_segment)
+        
+        delay -= 0.001
         
         score += 10
         
@@ -142,6 +146,8 @@ while True:
             segments.clear()
             
             score = 0
+            
+            delay = 0.2
         
             pen.clear()
             pen.write("Score: {} High Score: {}".format(score,high_score),align="center",font=("Courier", 24, "normal"))
