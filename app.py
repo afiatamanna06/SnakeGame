@@ -82,7 +82,7 @@ wn.onkeypress(go_right, "d")
 while True:
     wn.update()
     
-    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
+    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>239 or head.ycor()<-290:
         time.sleep(1)
         head.goto(0,0)
         head.direction = "stop"
