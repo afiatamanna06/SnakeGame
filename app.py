@@ -101,8 +101,8 @@ while True:
             
         
     if head.distance(food) < 20:
-        x = random.randint(-290,290)
-        y = random.randint(-290,290)
+        x = random.randint(-285,285)
+        y = random.randint(-285,239)
         food.goto(x, y)
         
         new_segment = turtle.Turtle()
